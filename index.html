@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAULT // 09 — Architectural Grooming & Haute Barber Atelier</title>
+  <meta name="description" content="Atelier de barbería arquitectónica de alta vanguardia. Fusión de precisión quirúrgica con filo de acero damasco, lujo brutalista y cultura streetwear de autor.">
+  <meta name="theme-color" content="#080809">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="VAULT // 09 — Haute Barber Atelier">
+  <meta property="og:description" content="Barbería de autor, desvanecidos arquitectónicos y rituales con navaja de acero damasquino.">
+  <meta property="og:type" content="website">
+
+  <!-- Avant-Garde Fonts: Street Graffiti, Editorial Display, Monospace & Geometric -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Outfit:wght@300;400;500;600;700&family=Rock+Salt&family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Physical Noise Filter & Fluid Magnetic Cursor -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       TOP TELEMETRY & HUD NAVIGATION
+       ========================================================================== -->
+  <header class="hud-header" id="main-hud">
+    <!-- Left: Hamburger Menu -->
+    <button class="nav-toggle" id="mobile-toggle" aria-label="Abrir Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Center: Brand Logo -->
+    <div class="header-center">
+      <a href="#hero" class="brand-anchor" id="brand-logo-link">
+        <div class="brand-emblem">
+          VAULT <span>09</span>
+        </div>
+        <span class="brand-tag-mini">RAW CRAFT</span>
+      </a>
+    </div>
+
+    <!-- Right: Reserve Button -->
+    <div class="hud-actions">
+      <a href="#booking" class="btn-monolith" id="hud-reserve-btn">
+        <span>RESERVAR</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M7 17L17 7M17 7H7M17 7V17"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Location Strip below header -->
+  <div class="location-sub-strip">
+    <span style="color: var(--accent-gold);">CDMX • BRL • TYO</span>
+  </div>
+
+  <!-- Fullscreen / Dropdown Menu -->
+  <nav class="dropdown-nav" id="dropdown-menu" aria-label="Navegación Principal">
+    <ul class="hud-nav-links">
+      <li><a href="#manifesto" id="nav-manifesto">01. Manifiesto</a></li>
+      <li><a href="#dossier" id="nav-dossier">02. Specimen Lookbook</a></li>
+      <li><a href="#services" id="nav-services">03. Menú de Servicios</a></li>
+      <li><a href="#syndicate" id="nav-syndicate">04. Maestros</a></li>
+      <li><a href="#booking" id="nav-booking">05. Protocolo VIP</a></li>
+    </ul>
+  </nav>
+
+  <!-- Floating Audio Button -->
+  <button class="audio-toggle-btn floating-audio" id="audio-toggle" title="Alternar Paisaje Sonoro y Audio Táctil">
+    <div class="sound-bars" aria-hidden="true">
+      <div class="sound-bar"></div>
+      <div class="sound-bar"></div>
+      <div class="sound-bar"></div>
+    </div>
+    <span class="audio-label">AUDIO OFF</span>
+  </button>
+
+  <!-- ==========================================================================
+       HERO: SPLIT-HORIZON KINETIC ARCHITECTURAL STAGE
+       ========================================================================== -->
+  <main>
+    <section class="hero-stage" id="hero">
+      <div class="hero-grid">
+        
+        <!-- Left: Street Typographic Disruption -->
+        <div class="hero-typography">
+          <div class="hero-meta-badge">
+            HAUTE BARBERING • SURGICAL GEOMETRY
+          </div>
+
+          <h1 class="hero-title-main">
+            FILO <span class="text-dim">PURO.</span><br>
+            CERO <span class="text-gold">COMPROMISO.</span>
+          </h1>
+
+          <!-- Street Graffiti Stencil Tag Overlay -->
+          <div class="graffiti-tag-overlay" aria-hidden="true">
+            #RAW_PRECISION
+          </div>
+          <div class="graffiti-spray-dot" style="top: 20%; left: 45%;"></div>
+
+          <p class="hero-subdescription">
+            No seguimos tendencias de algoritmos ni estéticas desechables. 
+            <strong>VAULT 09</strong> es un santuario brutalista donde la alta sastrería capilar, 
+            el acero damasquino forjado a mano y la cultura de calle colisionan con precisión arquitectónica milimétrica.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#booking" class="btn-monolith" id="hero-book-action">
+              <span>ACCEDER AL PROTOCOLO VIP</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#dossier" class="btn-ghost-architect" id="hero-explore-dossier">
+              <span>EXPLORAR ANATOMÍA DEL CORTE</span>
+            </a>
+          </div>
+
+          <div class="client-proof-mini">
+            <div class="rating-stars">★★★★★</div>
+            <div class="proof-text">
+              CALIFICACIÓN 5.0 • MÁS DE 1,400 CLIENTES DISTINGUIDOS & EDITORIALES DE MODA
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Monolithic Brutalist Atelier Viewport -->
+        <div class="hero-visual-monolith">
+          <div class="monolith-frame">
+            <img src="assets/img/atelier_hero.jpg" alt="Interior del atelier brutalista de VAULT 09" class="monolith-img" id="hero-atelier-visual">
+            
+            <!-- Real-time Blade Telemetry HUD on Visual -->
+            <div class="blade-telemetry-card">
+              <div class="telemetry-col">
+                <h4>ESTACIÓN ACTIVA</h4>
+                <p>NOGAL & ACERO #03</p>
+              </div>
+              <div class="telemetry-col">
+                <h4>PRECISIÓN DE CORTE</h4>
+                <p>0.08 MM TOLERANCIA</p>
+              </div>
+              <div class="telemetry-tag-neon">
+                ESTADO: READY
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Infinite Brutalist Tape Marquee -->
+      <div class="architect-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>ZERO COMPROMISE</span>
+          <span class="highlight">SURGICAL MID FADES</span>
+          <span class="tag-glow">REAL STREET REPUTATION</span>
+          <span>MATTE DAMASCUS BLADES</span>
+          <span class="highlight">JAPANESE SCALP THERAPY</span>
+          <span class="tag-glow">ATELIER PRIVÉ</span>
+          <span>ZERO COMPROMISE</span>
+          <span class="highlight">SURGICAL MID FADES</span>
+          <span class="tag-glow">REAL STREET REPUTATION</span>
+          <span>MATTE DAMASCUS BLADES</span>
+          <span class="highlight">JAPANESE SCALP THERAPY</span>
+          <span class="tag-glow">ATELIER PRIVÉ</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         01 / MANIFIESTO: ASYMMETRICAL EDITORIAL ARCHITECTURE
+         ========================================================================== -->
+    <section class="section-manifesto" id="manifesto">
+      <div class="manifesto-header-block">
+        <div>
+          <div class="section-label-super">
+            <span>01.</span> FILOSOFÍA DE MARCA
+          </div>
+          <h2 class="section-headline-street">
+            EL RECHAZO A LO ORDINARIO
+          </h2>
+        </div>
+        <div class="manifesto-coord">
+          VISIÓN EDITORIAL • EST. 2026
+        </div>
+      </div>
+
+      <div class="manifesto-asymmetry-grid">
+        <div>
+          <blockquote class="manifesto-lead-quote">
+            “No cortamos cabello para encajar. Construimos líneas de fuerza que esculpen el rostro con la contundencia de un bloque de hormigón armado.”
+          </blockquote>
+          <div class="manifesto-tag-mark">
+            — Enzo Valenti, Fundador & Master Craftsman
+          </div>
+        </div>
+
+        <div class="manifesto-pillars">
+          <article class="pillar-card">
+            <span class="pillar-num">01. GEOMETRÍA</span>
+            <h3 class="pillar-title">ESTUDIO CRANEAL</h3>
+            <p class="pillar-desc">
+              Cada servicio inicia con un diagnóstico biométrico de facciones, densidad capilar y ángulo mandibular. Nada se improvisa.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-num">02. METALURGIA</span>
+            <h3 class="pillar-title">ACERO DAMASCO</h3>
+            <p class="pillar-desc">
+              Hojas forjadas a mano con 60 capas plegadas que garantizan un filo hipoalergénico que desliza sin fricción ni irritación dérmica.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-num">03. INMERSIÓN</span>
+            <h3 class="pillar-title">RITUAL SENSORIAL</h3>
+            <p class="pillar-desc">
+              Vapor de ozono ionizado, toallas calientes infusionadas con aceites botánicos de origen silvestre y coctelería o café de especialidad.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-num">04. EXCLUSIVIDAD</span>
+            <h3 class="pillar-title">POLÍTICA ZERO WAIT</h3>
+            <p class="pillar-desc">
+              Atención bajo agenda estrictamente reservada. Tu sillón y tu maestro asignado están listos en el minuto exacto de tu cita.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         02 / THE SPECIMEN DOSSIER: INTERACTIVE CUT ANATOMY
+         ========================================================================== -->
+    <section class="section-dossier" id="dossier">
+      <div class="dossier-inner">
+        
+        <div class="dossier-controls">
+          <div>
+            <div class="section-label-super">
+              <span>02.</span> ARCHIVO DE ESPECÍMENES
+            </div>
+            <h2 class="section-headline-street">
+              ANATOMÍA DEL CORTE
+            </h2>
+          </div>
+
+          <!-- Interactive Tabs -->
+          <div class="dossier-tabs" role="tablist">
+            <button class="dossier-tab-btn active" data-specimen="01" id="tab-spec-01" role="tab" aria-selected="true">
+              01. MID-FADE & CONTOUR
+            </button>
+            <button class="dossier-tab-btn" data-specimen="02" id="tab-spec-02" role="tab" aria-selected="false">
+              02. RAW STREET CROP
+            </button>
+            <button class="dossier-tab-btn" data-specimen="03" id="tab-spec-03" role="tab" aria-selected="false">
+              03. DAMASCUS RITUAL
+            </button>
+          </div>
+        </div>
+
+        <!-- Specimen Interactive Stage -->
+        <div class="specimen-stage">
+          
+          <!-- Visual Viewport with Interactive Pulse Hotspots -->
+          <div class="specimen-viewport-wrapper">
+            <img src="assets/img/look_fade.jpg" alt="Lookbook Specimen Cut" class="specimen-image" id="specimen-img">
+            
+            <!-- Hotspots dynamically loaded via JS -->
+            <div id="hotspots-layer"></div>
+          </div>
+
+          <!-- Technical Specimen Data Matrix -->
+          <div class="specimen-data-panel">
+            <div>
+              <div class="specimen-tagline" id="specimen-tagline">
+                SPECIMEN A-01: SURGICAL TRANSITION
+              </div>
+              <h3 class="specimen-name" id="specimen-name">
+                MID-FADE & SCULPTED GEOMETRY
+              </h3>
+              <p class="specimen-description" id="specimen-desc">
+                Arquitectura milimétrica con degradado medio que se desvanece suavemente a piel expuesta. Contornos afeitados a navaja de acero damasco con acabado satinado. Diseñado para proyectar autoridad ejecutiva con filo urbano.
+              </p>
+
+              <!-- Dynamic 4-Cell Spec Grid -->
+              <div class="specimen-specs-grid" id="specimen-specs-container">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+
+            <div>
+              <a href="#booking" class="btn-monolith" id="specimen-book-btn">
+                <span>SOLICITAR ESTE ESPECÍMEN EN CITA</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         03 / BESPOKE SERVICES MANIFEST (INTERACTIVE LEDGER)
+         ========================================================================== -->
+    <section class="section-services" id="services">
+      <div class="manifesto-header-block">
+        <div>
+          <div class="section-label-super">
+            <span>03.</span> MENÚ DE PROTOCOLOS
+          </div>
+          <h2 class="section-headline-street">
+            EL MANIFIESTO DE SERVICIOS
+          </h2>
+        </div>
+        <div class="manifesto-coord">
+          PRECIOS EN USD • INCLUYE CORTESÍA DE BEBIDA
+        </div>
+      </div>
+
+      <div class="ledger-container">
+        
+        <div class="ledger-header" aria-hidden="true">
+          <div>CÓDIGO</div>
+          <div>PROTOCOLO & ESPECIFICACIONES</div>
+          <div>TIEMPO</div>
+          <div>PRECIO</div>
+          <div style="text-align: right;">ACCIÓN DIRECTA</div>
+        </div>
+
+        <!-- Line 01 -->
+        <div class="ledger-item" data-service="THE ARCHITECTURAL CUT" data-price="$65 USD" id="service-row-1">
+          <div class="ledger-code">V09-CUT</div>
+          <div class="ledger-title-group">
+            <h3>
+              THE ARCHITECTURAL CUT
+              <span class="ledger-badge-tier">SIGNATURE</span>
+            </h3>
+            <p class="ledger-sub">
+              Lavado purificante, diagnóstico craneal, corte con tijera japonesa y máquina de precisión, afeitado de cuello con navaja libre y estilizado con arcilla mineral orgánica.
+            </p>
+          </div>
+          <div class="ledger-duration">45 MIN</div>
+          <div class="ledger-price">$65</div>
+          <div class="ledger-action">
+            <span class="btn-ghost-architect">SELECCIONAR</span>
+          </div>
+        </div>
+
+        <!-- Line 02 -->
+        <div class="ledger-item" data-service="ROYAL DAMASCUS BEARD" data-price="$50 USD" id="service-row-2">
+          <div class="ledger-code">V09-BEARD</div>
+          <div class="ledger-title-group">
+            <h3>
+              ROYAL DAMASCUS BEARD
+              <span class="ledger-badge-tier">SURGICAL</span>
+            </h3>
+            <p class="ledger-sub">
+              Esculpido geométrico de barba, doble toalla caliente con vapor de ozono y eucalipto silvestre, espuma templada batida a mano, navaja damasquina y sellado con crioterapia mineral.
+            </p>
+          </div>
+          <div class="ledger-duration">40 MIN</div>
+          <div class="ledger-price">$50</div>
+          <div class="ledger-action">
+            <span class="btn-ghost-architect">SELECCIONAR</span>
+          </div>
+        </div>
+
+        <!-- Line 03 -->
+        <div class="ledger-item" data-service="THE MONOLITH FULL RITUAL" data-price="$105 USD" id="service-row-3">
+          <div class="ledger-code">V09-RITUAL</div>
+          <div class="ledger-title-group">
+            <h3>
+              THE MONOLITH FULL RITUAL
+              <span class="ledger-badge-tier">COMPLETO</span>
+            </h3>
+            <p class="ledger-sub">
+              La experiencia integral definitiva: Corte arquitectónico + Escultura de barba con navaja + Exfoliación facial de carbón activo + Masaje craneal shiatsu relajante.
+            </p>
+          </div>
+          <div class="ledger-duration">80 MIN</div>
+          <div class="ledger-price">$105</div>
+          <div class="ledger-action">
+            <span class="btn-ghost-architect">SELECCIONAR</span>
+          </div>
+        </div>
+
+        <!-- Line 04 -->
+        <div class="ledger-item" data-service="VIP PRIVÉ AFTER-HOURS" data-price="$220 USD" id="service-row-4">
+          <div class="ledger-code">V09-PRIVE</div>
+          <div class="ledger-title-group">
+            <h3>
+              VIP PRIVÉ AFTER-HOURS
+              <span class="ledger-badge-tier" style="color: var(--accent-gold); border-color: var(--accent-gold);">ULTRA VIP</span>
+            </h3>
+            <p class="ledger-sub">
+              Cierre total del atelier en horario privado nocturno para ti o tu invitado. Servicio maestro completo, selección de Single Malt escocés o sake premium y curaduría sonora privada.
+            </p>
+          </div>
+          <div class="ledger-duration">120 MIN</div>
+          <div class="ledger-price">$220</div>
+          <div class="ledger-action">
+            <span class="btn-ghost-architect">SELECCIONAR</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         04 / THE CRAFTSMEN SYNDICATE (MASTER BARBER ROSTER)
+         ========================================================================== -->
+    <section class="section-syndicate" id="syndicate">
+      <div class="dossier-inner">
+        <div class="manifesto-header-block">
+          <div>
+            <div class="section-label-super">
+              <span>04.</span> CUERPO DE MAESTROS
+            </div>
+            <h2 class="section-headline-street">
+              EL SINDICATO DE ARTESANOS
+            </h2>
+          </div>
+          <div class="manifesto-coord">
+            MAESTROS CERTIFICADOS • EXCELENCIA PURA
+          </div>
+        </div>
+
+        <div class="syndicate-grid">
+          
+          <!-- Master 01: Enzo Valenti -->
+          <article class="artisan-card" id="artisan-enzo">
+            <div class="artisan-photo-wrap">
+              <img src="assets/img/master_enzo.jpg" alt="Master Barber Enzo Valenti" class="artisan-photo">
+              <div class="artisan-tag-badge">MASTER FOUNDER</div>
+            </div>
+            <div class="artisan-info">
+              <div class="artisan-signature">Enzo Valenti</div>
+              <h3 class="artisan-name">ENZO VALENTI</h3>
+              <div class="artisan-role">DIRECTOR CREATIVO • 14 AÑOS EXP.</div>
+              <p class="artisan-bio">
+                Formado en las barberías históricas de Milán y los talleres experimentales de Shibuya. Especialista en arquitectura craneal y desvanecidos anatómicos de precisión milimétrica.
+              </p>
+              <div class="artisan-footer-meta">
+                <div class="artisan-status">
+                  <span class="live-pulse"></span>
+                  <span>DISPONIBLE HOY (2 CUPOS)</span>
+                </div>
+                <div>ESTACIÓN #01</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Master 02: Kai Tanaka -->
+          <article class="artisan-card" id="artisan-kai">
+            <div class="artisan-photo-wrap">
+              <img src="assets/img/look_crop.jpg" alt="Artisan Kai Tanaka" class="artisan-photo" style="object-position: top;">
+              <div class="artisan-tag-badge">STREET CUT DIRECTOR</div>
+            </div>
+            <div class="artisan-info">
+              <div class="artisan-signature">Kai Tanaka</div>
+              <h3 class="artisan-name">KAI TANAKA</h3>
+              <div class="artisan-role">ESPECIALISTA EN TEXTURA URBANA</div>
+              <p class="artisan-bio">
+                Pionero del movimiento French Crop quebrado y texturizado con navaja de afeitar japonesa Feather Artist Club. Director del archivo de lookbooks editoriales de VAULT 09.
+              </p>
+              <div class="artisan-footer-meta">
+                <div class="artisan-status">
+                  <span class="live-pulse"></span>
+                  <span>DISPONIBLE HOY (3 CUPOS)</span>
+                </div>
+                <div>ESTACIÓN #02</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Master 03: Mateo Cruz -->
+          <article class="artisan-card" id="artisan-mateo">
+            <div class="artisan-photo-wrap">
+              <img src="assets/img/blade_craft.jpg" alt="Artisan Mateo Cruz" class="artisan-photo">
+              <div class="artisan-tag-badge">BLADE MASTER</div>
+            </div>
+            <div class="artisan-info">
+              <div class="artisan-signature">Mateo Cruz</div>
+              <h3 class="artisan-name">MATEO CRUZ</h3>
+              <div class="artisan-role">MAESTRO EN NAVAJA DAMASCO</div>
+              <p class="artisan-bio">
+                Dedicado exclusivamente al arte del afeitado clásico ritual, tratamientos de vapor de ozono y escultura de barba con técnicas de barbero tradicional del siglo XIX.
+              </p>
+              <div class="artisan-footer-meta">
+                <div class="artisan-status">
+                  <span class="live-pulse"></span>
+                  <span>DISPONIBLE HOY (1 CUPO)</span>
+                </div>
+                <div>ESTACIÓN #03</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05 / VIP BOOKING PROTOCOL (THE INTERACTIVE MASTER SUITE)
+         ========================================================================== -->
+    <section class="section-booking" id="booking">
+      <div class="booking-title-block">
+        <div class="section-label-super">
+          <span>05.</span> CONSOLA DE RESERVAS
+        </div>
+        <h2 class="section-headline-street">
+          PROTOCOLO DE ACCESO VIP
+        </h2>
+      </div>
+
+      <div class="booking-monolith-box">
+        
+        <!-- Interactive Step Selector Form -->
+        <form id="booking-form" class="booking-form-grid">
+          
+          <!-- Step 1: Select Service -->
+          <div class="form-step-group">
+            <div class="form-step-label">
+              <span>01.</span> SELECCIONA EL SERVICIO
+            </div>
+            <div class="selector-pills-row">
+              <div class="selector-pill service-pill selected" data-name="THE ARCHITECTURAL CUT" data-price="$65 USD">
+                <span>THE ARCHITECTURAL CUT</span>
+                <small>($65)</small>
+              </div>
+              <div class="selector-pill service-pill" data-name="ROYAL DAMASCUS BEARD" data-price="$50 USD">
+                <span>ROYAL DAMASCUS BEARD</span>
+                <small>($50)</small>
+              </div>
+              <div class="selector-pill service-pill" data-name="THE MONOLITH FULL RITUAL" data-price="$105 USD">
+                <span>THE MONOLITH FULL RITUAL</span>
+                <small>($105)</small>
+              </div>
+              <div class="selector-pill service-pill" data-name="VIP PRIVÉ AFTER-HOURS" data-price="$220 USD">
+                <span>VIP PRIVÉ AFTER-HOURS</span>
+                <small>($220)</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Select Craftsman -->
+          <div class="form-step-group">
+            <div class="form-step-label">
+              <span>02.</span> SELECCIONA TU MAESTRO
+            </div>
+            <div class="selector-pills-row">
+              <div class="selector-pill barber-pill selected" data-barber="ENZO VALENTI">
+                <span>ENZO VALENTI</span>
+                <small>(Fundador)</small>
+              </div>
+              <div class="selector-pill barber-pill" data-barber="KAI TANAKA">
+                <span>KAI TANAKA</span>
+                <small>(Street Director)</small>
+              </div>
+              <div class="selector-pill barber-pill" data-barber="MATEO CRUZ">
+                <span>MATEO CRUZ</span>
+                <small>(Blade Master)</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Time Slot Matrix -->
+          <div class="form-step-group">
+            <div class="form-step-label">
+              <span>03.</span> HORARIO DISPONIBLE (HOY)
+            </div>
+            <div class="time-slot-grid">
+              <button type="button" class="time-slot-btn unavailable">11:00 AM</button>
+              <button type="button" class="time-slot-btn unavailable">12:30 PM</button>
+              <button type="button" class="time-slot-btn selected" data-time="15:30">15:30 PM</button>
+              <button type="button" class="time-slot-btn" data-time="16:45">16:45 PM</button>
+              <button type="button" class="time-slot-btn" data-time="18:00">18:00 PM</button>
+              <button type="button" class="time-slot-btn" data-time="19:15">19:15 PM</button>
+              <button type="button" class="time-slot-btn" data-time="20:30">20:30 PM</button>
+              <button type="button" class="time-slot-btn" data-time="21:45">21:45 PM</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Hospitality Preference -->
+          <div class="form-step-group">
+            <div class="form-step-label">
+              <span>04.</span> CORTESÍA DE BIENVENIDA
+            </div>
+            <div class="selector-pills-row">
+              <div class="selector-pill beverage-pill selected" data-bev="DOBLE ESPRESSO">
+                <span>☕ DOBLE ESPRESSO ARTESANAL</span>
+              </div>
+              <div class="selector-pill beverage-pill" data-bev="SINGLE MALT WHISKY">
+                <span>🥃 JAPANESE / SINGLE MALT</span>
+              </div>
+              <div class="selector-pill beverage-pill" data-bev="AGUA SAN PELLEGRINO">
+                <span>🧊 SAN PELLEGRINO MINERAL</span>
+              </div>
+              <div class="selector-pill beverage-pill" data-bev="SESIÓN EN SILENCIO (ZEN)">
+                <span>🤫 MODO SILENCIO ZEN</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Client Identity -->
+          <div class="form-step-group">
+            <div class="form-step-label">
+              <span>05.</span> TUS DATOS PERSONALES
+            </div>
+            <div class="client-input-row">
+              <input type="text" id="client-name-input" class="input-architect" placeholder="NOMBRE COMPLETO" required autocomplete="name">
+              <input type="tel" id="client-phone-input" class="input-architect" placeholder="TELÉFONO / WHATSAPP" required autocomplete="tel">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-monolith" id="confirm-booking-btn" style="width: 100%; padding: 1.1rem;">
+            <span>CONFIRMAR Y EMITIR PASE VIP</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+
+        </form>
+
+        <!-- Right Side: Digital VIP Boarding Pass Live Preview -->
+        <div class="ticket-preview-monolith">
+          <div class="ticket-notch-left" aria-hidden="true"></div>
+          <div class="ticket-notch-right" aria-hidden="true"></div>
+
+          <div>
+            <div class="ticket-brand">VAULT 09</div>
+            <div class="ticket-meta-tag">#VIP_ACCESS_PERMIT</div>
+
+            <div class="ticket-detail-row">
+              <div class="ticket-detail-label">SERVICIO REGISTRADO</div>
+              <div class="ticket-detail-val" id="pass-service">THE ARCHITECTURAL CUT</div>
+            </div>
+
+            <div class="ticket-detail-row">
+              <div class="ticket-detail-label">TARIFA ESTIMADA</div>
+              <div class="ticket-detail-val" id="pass-price" style="color: var(--accent-gold);">$65 USD</div>
+            </div>
+
+            <div class="ticket-detail-row">
+              <div class="ticket-detail-label">MAESTRO ASIGNADO</div>
+              <div class="ticket-detail-val" id="pass-barber">ENZO VALENTI</div>
+            </div>
+
+            <div class="ticket-detail-row">
+              <div class="ticket-detail-label">VENTANA DE HORARIO</div>
+              <div class="ticket-detail-val" id="pass-datetime">HOY • 15:30</div>
+            </div>
+
+            <div class="ticket-detail-row">
+              <div class="ticket-detail-label">PROTOCOLO BEBIDA</div>
+              <div class="ticket-detail-val" id="pass-beverage" style="color: var(--accent-neon);">DOBLE ESPRESSO</div>
+            </div>
+          </div>
+
+          <div class="ticket-barcode-wrap">
+            <canvas id="qr-canvas" width="60" height="60" class="ticket-qr-canvas" aria-label="Código QR del pase VIP"></canvas>
+            <div>
+              <div class="ticket-detail-label">CÓDIGO DE RESERVA</div>
+              <div class="ticket-code-str" id="pass-code">VLT-882941</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDITORIAL PRESS & REVIEWS
+         ========================================================================== -->
+    <section class="section-press" aria-label="Reseñas de Prensa y Crítica">
+      <div class="press-grid">
+        
+        <div class="press-card">
+          <p class="press-card-quote">
+            “VAULT 09 ha destruido la barbería hipster genérica para crear un templo de arquitectura brutalista y corte quirúrgico implacable.”
+          </p>
+          <div class="press-outlet">GQ MAGAZINE // HAUTE GROOMING AWARD</div>
+        </div>
+
+        <div class="press-card">
+          <p class="press-card-quote">
+            “La fusión perfecta entre sastrería de alta gama y cultura de calle. El desvanecido que obtienes aquí es literalmente arte puro.”
+          </p>
+          <div class="press-outlet">HYPEBEAST // DESIGN & CULTURE</div>
+        </div>
+
+        <div class="press-card">
+          <p class="press-card-quote">
+            “Un espacio donde el acero damasco y la hospitalidad silenciosa redefinen la masculinidad sofisticada contemporánea.”
+          </p>
+          <div class="press-outlet">VOGUE HOMMES // ATELIER REVIEW</div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       ARCHITECTURAL FOOTER
+       ========================================================================== -->
+  <footer class="footer-monolith">
+    <div class="footer-inner">
+      <div class="footer-top-row">
+        <div>
+          <div class="footer-big-tag">
+            VAULT <span>09</span>
+          </div>
+          <p style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; margin-top: 0.8rem; max-width: 320px;">
+            El estándar absoluto en barbería arquitectónica y rituales con navaja de acero damasquino.
+          </p>
+        </div>
+
+        <div class="footer-col-group">
+          <div class="footer-col">
+            <h4>UBICACIONES</h4>
+            <ul>
+              <li><a href="#hero">CDMX • Polanco Av. 142</a></li>
+              <li><a href="#hero">BERLIN • Mitte Rosenthaler 88</a></li>
+              <li><a href="#hero">TOKYO • Shibuya Jingumae 4</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>CONTACTO PRIVÉ</h4>
+            <ul>
+              <li><a href="tel:+525500000000">+52 55 9182 3000</a></li>
+              <li><a href="mailto:concierge@vault09.com">concierge@vault09.com</a></li>
+              <li><a href="#booking">WhatsApp VIP Directo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>MANIFIESTO</h4>
+            <ul>
+              <li><a href="#manifesto">La Filosofía</a></li>
+              <li><a href="#dossier">Specimen Lookbook</a></li>
+              <li><a href="#syndicate">Carreras & Residencias</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-telemetry-bar">
+        <div class="telemetry-item">
+          <span class="live-pulse"></span>
+          <span>ATELIER: ABIERTO</span>
+        </div>
+        <div class="telemetry-item">
+          <span id="live-clock">00:00:00 LOC</span>
+        </div>
+        <div class="telemetry-item">
+          <span>SILLAS ACTIVAS: 4/6</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 VAULT 09 ATELIER. TODOS LOS DERECHOS RESERVADOS.</div>
+        <div style="font-family: var(--font-tag); color: var(--accent-neon); font-size: 0.85rem;">
+          #NOT_FOR_EVERYONE
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BOOKING SUCCESS MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-text">
+    <div class="modal-card">
+      <div class="modal-tag">#CONFIRMADO</div>
+      <h3 class="modal-title" id="modal-title-text">PASE VIP EMITIDO</h3>
+      <p class="modal-desc">
+        Bienvenido, <strong id="modal-client-name" style="color: #ffffff;">GUEST</strong>. Tu cita ha sido asentada en el libro mayor de <strong>VAULT 09</strong>. 
+        Tu código único de pase es <strong id="modal-booking-code" style="color: var(--accent-neon);">VLT-000000</strong>.
+        Te recibiremos con tu bebida preparada con 10 minutos de anticipación.
+      </p>
+      <button class="btn-monolith" id="modal-close-btn" style="width: 100%;">
+        <span>CERRAR Y GUARDAR PASE</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
